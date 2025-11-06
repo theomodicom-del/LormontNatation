@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/>
+    <title>LormontNatation</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="icon.webp">
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <!-- Logo à gauche -->
+        <a href="index.html" class="brand">
+          <img class="logo" src="icon.webp" alt="Logo Lormont Natation">
+        </a>
+
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+
+        <!-- Menu centré -->
+        <nav aria-label="Navigation principale">
+          <ul id="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Aquagym / Sport Santé</a></li>
+
+            <li>
+              <a href="#">Natation ▾</a>
+              <ul>
+                <li><a href="#">École de Natation</a></li>
+                <li><a href="#">Jeune</a></li>
+                <li><a href="#">Junior</a></li>
+                <li><a href="#">Master</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Attestation ▾</a>
+              <ul>
+                <li><a href="#">Sauv'Nage</a></li>
+                <li><a href="#">Pass'Sport de l'eau</a></li>
+                <li><a href="#">Pass'Compétition</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Compétition ▾</a>
+              <ul>
+                <li><a href="#">Inscription</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="#">Calendrier</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Boutique</a></li>
+
+            <li>
+              <a href="#">Inscriptions ▾</a>
+              <ul>
+                <li><a href="#">Horaires / Tarifs</a></li>
+                <li><a href="#">Dossier d'inscription</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Contact ▾</a>
+              <ul>
+                <li><a href="#">Nous contacter</a></li>
+                <li><a href="#">Le Comité</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main></main>
+    <footer></footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("menu").classList.toggle("active");
+      }
+    </script>
+
+    <main>
+        <div class="image-container">
+    <img src="nageur.webp" alt="nageur">
+    <div class="overlay">
+      <h2>Lormont - Natation</h2>
+      <p>Texte explicatif du club lormont Natation</p>
+      <button>Notre Actualité !</button>
+    </div>
+  </div>
+    </main>
+  </body>
+</html>

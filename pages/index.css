@@ -1,0 +1,200 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+  font-family: Arial, 
+  sans-serif; 
+  background: #f4f4f4; }
+
+/* Barre */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  line-height: 1;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;              /* nécessaire pour le logo en position absolue */
+  display: flex;
+  justify-content: center;         /* centre le menu */
+  align-items: center;
+  padding: 0.2rem 1rem;
+}
+
+/* Logo à gauche sans pousser le menu */
+.brand {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 80px;                   /* demandé */
+  display: block;
+  object-fit: contain;
+}
+
+/* Menu centré */
+nav { flex: 0; }
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;         /* centre la liste */
+}
+
+#menu > li { position: relative; }
+
+#menu > li > a {
+  text-decoration: none;
+  color: #000;
+  padding: 1rem;
+  display: block;
+  font-weight: 600;
+}
+
+#menu > li > a:hover {
+  color: #ffa200;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+/* Sous-menus */
+#menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  border-radius: 5px;
+  list-style: none;
+  padding: .5rem 0;
+  animation: fadeIn .2s ease-in-out;
+}
+
+#menu li:hover > ul { display: block; }
+
+#menu li ul li a {
+  display: block;
+  padding: .7rem 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: .95rem;
+}
+
+#menu li ul li a:hover {
+  background: #f0f0f0;
+  color: #ffa200;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Burger (optionnel) */
+.menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; position: absolute; right: 16px; }
+
+  #menu {
+    flex-direction: column;
+    display: none;
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    padding-top: 100px;            /* pour ne pas chevaucher le logo */
+  }
+  #menu.active { display: flex; }
+
+  #menu > li > a { padding: 1rem; border-bottom: 1px solid #eee; }
+
+  #menu li ul { position: static; box-shadow: none; width: 100%; border-radius: 0; }
+  #menu li:hover > ul { display: none; }
+  #menu li ul li a { padding-left: 2rem; }
+}
+
+main {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+.image-container {
+      position: relative;
+      width: auto;
+      height: 400px;
+      margin: 50px auto;
+      overflow: hidden;
+      
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+.image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+.overlay h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+.overlay p {
+  font-size: 1.1em;
+  max-width: 80%;
+  margin-bottom: 20px;
+  }
+
+  .overlay button {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .overlay button:hover {
+      background-color: #e68900;
+    }
+
+button {
+  align-items: flex-start; /* alignement à gauche */
+  text-align: left;
+  padding: auto;
+}
+    
